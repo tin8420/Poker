@@ -1,0 +1,72 @@
+#cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%;
+  margin: 0 auto;
+
+}
+
+.card{
+  display: flex;
+  /* flex-basis:  flex-grow:  flex-shrink: ; */
+  flex: 7% 1 1 ;
+  /* 會跟著視窗大小比例變化 */
+  height: 8vw;
+  margin: 2px;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.card img{
+  max-width: 30%;
+  align-self: center;
+}
+.card p {
+  font-size: 20px;
+  margin: 3px;
+}
+.card :last-child {
+  transform: rotate(180deg);
+}
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+    background-color:#dae0e3;
+}  
+#header {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 0 auto;
+  width: 85%;
+}
+#header .title {
+  display: flex;
+  justify-content: flex-end;
+}
+#header img {
+  width: 100px;
+  margin: 0 10px;
+}
+
+#header .score {
+  align-self: flex-end;
+}
+#header .tried {
+  align-self: flex-end;
+}
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
